@@ -34,3 +34,12 @@ ipykernel>=6.15.0
 # Utilities
 tqdm>=4.64.0
 python-dotenv>=0.21.0
+
+pytest
+xgboost
+scikit-learn
+pandas
+numpy
+streamlit
+mlflow
+torch
