@@ -1,0 +1,15 @@
+name: ML App CI
+
+on: [push, pull_request]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build Docker image
+        run: docker build -t customer-seg-app .
+
+      - name: Run tests
+        run: docker run customer-seg-app python -m pytest tests/ -v
